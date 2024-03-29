@@ -8,16 +8,13 @@ import com.sample.framework.properties.TestData;
 
 import java.lang.reflect.Method;
 
-import static com.sample.framework.reports.ExtentTestManager.startTest;
-
 
 @SpringBootTest
 @ContextConfiguration(classes = {CreateWalletTest.class, Environment.class, TestData.class})
 public class CreateWalletTest extends BaseTest {
     @Test
     public void failingTest(Method method) {
-        startTest(method.getName(), "Test should fail as there won't be \"Start using Trust Wallet\" popup on landing screen");
-//        Navigate to Landing Screen
+       //        Navigate to Landing Screen
         homeScreenStep = welcomeScreenStep
                 .awaitPage()
                 .verifyUI()
@@ -25,9 +22,8 @@ public class CreateWalletTest extends BaseTest {
                 .closeStartUsingTrustWalletPopup();
     }
 
-    //    @Test
+        @Test
     public void createWallet(Method method) {
-        startTest(method.getName(), "Create wallet with secret phrase manual backup option.");
 //        Navigate to Landing Screen
         homeScreenStep = welcomeScreenStep
                 .awaitPage()

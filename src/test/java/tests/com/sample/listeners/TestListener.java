@@ -14,6 +14,7 @@ import org.apache.logging.log4j.Logger;
 import tests.com.sample.test.BaseTest;
 
 import static com.sample.framework.reports.ExtentTestManager.getTest;
+import static com.sample.framework.reports.ExtentTestManager.startTest;
 
 public class TestListener extends BaseTest implements ITestListener {
     private static final Logger Log = LogManager.getLogger(TestListener.class);
@@ -26,6 +27,7 @@ public class TestListener extends BaseTest implements ITestListener {
     public void onStart(ITestContext iTestContext) {
         Log.info("I am in onStart method " + iTestContext.getName());
         iTestContext.setAttribute("WebDriver", this.driver);
+        startTest(iTestContext.getName());
     }
 
     @Override
