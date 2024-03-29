@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SampleMobileAutomation">
+    <listeners>
+        <listener class-name="tests.com.sample.listeners.TestListener"/>
+    </listeners>
+    <test name="Test">
+        <parameter name="platformName" value="Android"/>
+        <classes>
+            <class name="tests.com.sample.test.CreateWalletTest"/>
+        </classes>
+    </test>
+</suite>
