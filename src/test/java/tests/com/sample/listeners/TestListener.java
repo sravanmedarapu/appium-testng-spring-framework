@@ -1,6 +1,5 @@
 package tests.com.sample.listeners;
 
-import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.sample.framework.reports.ExtentManager;
 import org.openqa.selenium.OutputType;
